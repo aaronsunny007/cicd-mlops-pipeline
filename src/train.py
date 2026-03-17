@@ -19,7 +19,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Start MLflow experiment
-mlflow.set_tracking_uri("file:./mlruns")
+mlflow.set_experiment("cicd_failure_prediction")
+
 with mlflow.start_run():
 
     model = RandomForestClassifier(n_estimators=100)
